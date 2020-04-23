@@ -1,0 +1,50 @@
+<body>
+  <div class="container" >
+    <div class="content">  
+        <div id='cadastro'>
+          <h1>Informações do Cliente</h1>
+          <table class=linha>
+            <p id="notice"><%= notice %></p>
+          </table>
+          <br>
+          <div class="field2">
+            <bold>Nome:</bold>
+            <label class="caixa"><%= formatted_name(@cliente.Nome) %></label>
+          </div>
+
+          <div class="field2">
+            <bold>Email:</bold>
+            <label class="caixa"><%= @cliente.Email%></label>
+          </div>
+
+          <div class="field2">
+            <bold>CPF:</bold>
+            <label class="caixa"><%= formatted_cpf(@cliente.CPF) %></label>
+          </div>
+
+          <div class="field2">
+            <bold>Telefone:</bold>
+            <label class="caixa"><%= formatted_tel(@cliente.Telefone) %></label>
+          </div>
+
+
+          <div class="field2">
+            <bold>Idade:</bold>
+            <label class="caixa"><%= @cliente.Idade %> anos</label>
+          </div>
+
+          <div class="field2">
+            <bold>Sexo:</bold>
+            <label class="caixa"><%= @cliente.Sexo %></label>
+          </div>
+          <br>
+          <div >
+            <%= link_to '<button type="button">Editar</button>'.html_safe, edit_cliente_path(@cliente) %>
+          </div>
+          <div >
+            <%= link_to '<button type="button">Voltar</button>'.html_safe, clientes_path %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
